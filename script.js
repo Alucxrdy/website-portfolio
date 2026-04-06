@@ -246,41 +246,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 7. Video Modal Logic (YouTube Embed) ---
+    // --- 7. Video Modal Logic (Local Video) ---
     const videoModal = document.getElementById('videoModal');
     const videoPlayer = document.getElementById('videoPlayer');
     const closeModal = document.getElementById('closeModal');
     const modalOverlay = document.getElementById('modalOverlay');
     const videoTriggers = document.querySelectorAll('.video-trigger');
 
-    const openVideo = (videoId, aspect = 'vertical') => {
-        if (!videoId) return;
+    const openVideo = (videoSrc, aspect = 'vertical') => {
+        if (!videoSrc) return;
         
         // Ajustar aspeto do contentor
         const videoContainer = document.getElementById('videoContainer');
         videoContainer.className = 'iframe-container ' + aspect;
         
-        // Construir URL de embed do YouTube
-        const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-        videoPlayer.src = embedUrl;
+        // Configurar e reproduzir vídeo local
+        videoPlayer.src = videoSrc;
         
         videoModal.classList.add('active');
         document.body.style.overflow = 'hidden';
+        
+        // Tentar dar play automático
+        videoPlayer.play().catch(e => console.log("Auto-play bloqueado pelo browser."));
     };
 
     const handleCloseVideo = () => {
         videoModal.classList.remove('active');
+        videoPlayer.pause();
         videoPlayer.src = ''; 
         document.body.style.overflow = '';
     };
 
     // --- 8. Interaction System ---
     videoTriggers.forEach(trigger => {
-        const videoId = trigger.getAttribute('data-video-src');
+        const videoSrc = trigger.getAttribute('data-video-src');
         const aspect = trigger.getAttribute('data-aspect') || 'vertical';
 
         trigger.addEventListener('click', () => {
-            if (videoId) openVideo(videoId, aspect);
+            if (videoSrc) openVideo(videoSrc, aspect);
         });
     });
 
