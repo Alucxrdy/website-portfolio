@@ -246,64 +246,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 7. Video Modal Logic (Native HTML5 Video) ---
+    // --- 7. Video Modal Logic (YouTube Embed) ---
     const videoModal = document.getElementById('videoModal');
     const videoPlayer = document.getElementById('videoPlayer');
     const closeModal = document.getElementById('closeModal');
     const modalOverlay = document.getElementById('modalOverlay');
     const videoTriggers = document.querySelectorAll('.video-trigger');
 
-    const openVideo = (videoSrc) => {
-        if (!videoSrc) return;
-        videoPlayer.src = videoSrc;
+    const openVideo = (videoId, aspect = 'vertical') => {
+        if (!videoId) return;
+        
+        // Ajustar aspeto do contentor
+        const videoContainer = document.getElementById('videoContainer');
+        videoContainer.className = 'iframe-container ' + aspect;
+        
+        // Construir URL de embed do YouTube
+        const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        videoPlayer.src = embedUrl;
+        
         videoModal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        videoPlayer.play().catch(e => console.log("Auto-play blocked, waiting for interaction."));
     };
 
     const handleCloseVideo = () => {
         videoModal.classList.remove('active');
-        videoPlayer.pause();
         videoPlayer.src = ''; 
         document.body.style.overflow = '';
     };
 
-    // --- 8. Hover Preview System (Performance Optimized) ---
+    // --- 8. Interaction System ---
     videoTriggers.forEach(trigger => {
-        const videoSrc = trigger.getAttribute('data-video-src');
-        const container = trigger.querySelector('.card-video-mockup');
-        let previewVideo = null;
+        const videoId = trigger.getAttribute('data-video-src');
+        const aspect = trigger.getAttribute('data-aspect') || 'vertical';
 
         trigger.addEventListener('click', () => {
-            if (videoSrc) openVideo(videoSrc);
-        });
-
-        // Hover to preview
-        trigger.addEventListener('mouseenter', () => {
-            if (!videoSrc) return;
-            
-            // Create preview video element on the fly
-            previewVideo = document.createElement('video');
-            previewVideo.src = videoSrc;
-            previewVideo.className = 'card-video-preview';
-            previewVideo.muted = true;
-            previewVideo.loop = true;
-            previewVideo.playsInline = true;
-            
-            container.appendChild(previewVideo);
-            
-            // Play with a small delay for smoother transition
-            setTimeout(() => {
-                if (previewVideo) previewVideo.play();
-            }, 50);
-        });
-
-        trigger.addEventListener('mouseleave', () => {
-            if (previewVideo) {
-                previewVideo.pause();
-                previewVideo.remove();
-                previewVideo = null;
-            }
+            if (videoId) openVideo(videoId, aspect);
         });
     });
 
