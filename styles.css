@@ -419,7 +419,6 @@ h1, h2, h3, h4 {
 
 .iframe-container {
     width: 100%;
-    aspect-ratio: 9/16;
     background: #000;
     border-radius: 16px;
     overflow: hidden;
@@ -427,11 +426,18 @@ h1, h2, h3, h4 {
     border: 1px solid var(--border-subtle);
 }
 
-.iframe-container video {
+.iframe-container.vertical {
+    aspect-ratio: 9/16;
+}
+
+.iframe-container.horizontal {
+    aspect-ratio: 16/9;
+}
+
+.iframe-container iframe {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background: #000;
+    border: none;
 }
 
 .modal-close {
