@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny.aep | High-End Video Editor</title>
+    <meta name="description" content="Portfolio of Danny.aep - Professional Video Editor specialized in Ads, Shorts, and SaaS Motion.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="glow-cursor" id="glowCursor"></div>
+    <div class="blob-bg blob-1"></div>
+    <div class="blob-bg blob-2"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <img src="Pfp.png" alt="Danny.aep Logo" class="logo-img">
+            Danny<span class="gradient-text">.aep</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#sobre" data-i18n="nav_about">Sobre Mim</a></li>
+            <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
+            <li class="controls-li">
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+                    <svg id="moonIcon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="sunIcon" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button id="langToggle" class="text-btn">EN</button>
+            </li>
+        </ul>
+        <a href="#contact" class="btn btn-outline" data-i18n="nav_contact">Let's Talk</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="badge" data-i18n="hero_badge">Disponível para Projetos</div>
+            <h1 class="hero-title"><span data-i18n="hero_title1">Corte seco</span><br><span class="gradient-text" data-i18n="hero_title2">não mora aqui</span></h1>
+            <p class="hero-subtitle" data-i18n="hero_sub">imagem, ritmo e intenção — o resto vem.</p>
+            <div class="hero-cta">
+                <a href="#reels" class="btn btn-primary" data-i18n="hero_cta_portfolio">Ver Portefólio</a>
+                <a href="#contact" class="btn btn-secondary glass-btn" data-i18n="hero_cta_hire">Contratar-me</a>
+            </div>
+            
+            <!-- Elemento visual do Hero removido conforme pedido -->
+        </div>
+    </header>
+
+    <main>
+        <!-- Sobre Mim -->
+        <section id="sobre" class="portfolio-section reveal-on-scroll">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2 class="about-title"><span data-i18n="about_title1">Sobre Mim.</span><br><span class="gradient-text text-small" data-i18n="about_title2">A Mente Criativa.</span></h2>
+                    <p class="about-text" data-i18n="about_text">
+                        Ohayo, meu nome é Daniel e meus amigos me chamam de Danny, comecei a editar por gosto e curiosidade e hoje é o que eu faço todos os dias. Gosto de edições que respiram,<br>
+                        que têm ritmo e não parecem forçados.<br>
+                        no fim, é simples:<br>
+                        se prende, funciona.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-tag">Adobe After Effects</div>
+                        <div class="skill-tag">Premiere Pro</div>
+                        <div class="skill-tag">Motion Graphics</div>
+                        <div class="skill-tag">Color Grading</div>
+                        <div class="skill-tag">Sound Design</div>
+                    </div>
+                </div>
+                <div class="about-visual tilt-card" data-tilt>
+                    <img src="Pfp.png" alt="Danny.aep Perfil" class="profile-img img-default">
+                    <img src="Pfp-hover.png" alt="Danny.aep Perfil 2" class="profile-img img-hover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="portfolio-section reveal-on-scroll">
+            <div class="section-header">
+                <h2 data-i18n="projects_title">Projetos Selecionados</h2>
+                <p data-i18n="projects_sub">Explora as minhas áreas de especialidade em edição de vídeo e motion design.</p>
+            </div>
+            
+            <div class="accordion-wrapper">
+                <!-- Accordion 1: Reels & Shorts -->
+                <div class="accordion-item active">
+                    <button class="accordion-header">
+                        <span class="accordion-title">Reels & Shorts</span>
+                        <div class="accordion-icon">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p class="section-desc" data-i18n="reels_sub">Conteúdo dinâmico de alta retenção para plataformas verticais.</p>
+                            <div class="grid grid-vertical">
+                                <!-- Card 1 -->
+                                <div class="card tilt-card video-trigger" data-video-src="Reels & Shorts/Copacaban.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-reel-1"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Copacaban</h3>
+                                            <span>Velocity Edit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 2 -->
+                                <div class="card tilt-card video-trigger" data-video-src="Reels & Shorts/Cut Out Animation.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-reel-2"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Cut Out Animation</h3>
+                                            <span>Special Effect Edit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="card tilt-card video-trigger" data-video-src="Reels & Shorts/Rock.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-reel-3"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Rock Style</h3>
+                                            <span>Velocity Montage</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 4 -->
+                                <div class="card tilt-card video-trigger" data-video-src="Reels & Shorts/see ya.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-reel-4"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>See Ya</h3>
+                                            <span>Animation & Transitions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 5 -->
+                                <div class="card tilt-card video-trigger" data-video-src="Reels & Shorts/sss.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-reel-1"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Social Style</h3>
+                                            <span>Velocity Funk</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 2: Ads -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="accordion-title" data-i18n="ads_title">Comerciais & Ads</span>
+                        <div class="accordion-icon">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p class="section-desc" data-i18n="ads_sub">Edição focada na conversão com ritmo cinematográfico.</p>
+                            <div class="grid grid-horizontal">
+                                <!-- Card Ad 1 -->
+                                <div class="card tilt-card video-trigger" data-video-src="Commercial and Ads/Smart_watch_ads.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-ad-1 horizontal-aspect"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Smart Watch Campaign</h3>
+                                            <span>Ads / Commercial</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 3: SaaS Motion -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="accordion-title">SaaS Motion</span>
+                        <div class="accordion-icon">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p class="section-desc" data-i18n="saas_sub">Animações de UI, product demos e visuais explainer para software.</p>
+                            <div class="grid grid-horizontal">
+                                <!-- Card SaaS 1 -->
+                                <div class="card tilt-card video-trigger" data-video-src="SaaS Motion/Blackedy.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-saas-1 horizontal-aspect"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Blackedy Platform</h3>
+                                            <span>SaaS UI Motion</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card SaaS 2 -->
+                                <div class="card tilt-card video-trigger" data-video-src="SaaS Motion/continente.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-saas-2 horizontal-aspect"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Continente App</h3>
+                                            <span>SaaS Walkthrough</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card SaaS 3 -->
+                                <div class="card tilt-card video-trigger" data-video-src="SaaS Motion/mogra.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-saas-1 horizontal-aspect"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Mogra Design</h3>
+                                            <span>UI Animation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card SaaS 4 -->
+                                <div class="card tilt-card video-trigger" data-video-src="SaaS Motion/nowadays.mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-saas-2 horizontal-aspect"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Nowadays Promo</h3>
+                                            <span>SaaS Motion Graphics</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card SaaS 5 -->
+                                <div class="card tilt-card video-trigger" data-video-src="SaaS Motion/Proposta Effects & Animação (Intro).mp4" data-tilt>
+                                    <div class="card-inner">
+                                        <div class="card-video-mockup gradient-saas-1 horizontal-aspect"><div class="play-btn"></div></div>
+                                        <div class="card-info">
+                                            <h3>Intro Effects</h3>
+                                            <span>SaaS Branding</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form -->
+        <section id="contact" class="portfolio-section contact-section reveal-on-scroll">
+            <div class="contact-box">
+                <h2 data-i18n="contact_title">Pronto para elevar o seu projeto?</h2>
+                <p data-i18n="contact_sub">Vamos criar algo extraordinário juntos. O foco é qualidade e retenção em cada segundo do seu vídeo.</p>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/danirismendes@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="O teu Nome" required data-i18n-placeholder="contact_name_ph">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="O teu Email" required data-i18n-placeholder="contact_email_ph">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Conta-me sobre o projeto..." required data-i18n-placeholder="contact_message_ph"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large mag-btn" data-i18n="contact_submit">Enviar Mensagem</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#home" class="logo">
+                <img src="Pfp.png" alt="Danny.aep Logo" class="logo-img">
+            </a>
+            <p><span data-i18n="footer_copy">&copy; 2026 Danny.aep. Todos os direitos reservados.</span></p>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@danny._.aep?is_from_webapp=1&sender_device=pc" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.13-1.47V18.77a8.43 8.43 0 01-8.59 8.41 8.43 8.43 0 01-8.59-8.41 8.43 8.43 0 018.59-8.41c.62-.01 1.23.01 1.84.07V14.6c-.61-.07-1.22-.11-1.84-.09a4.34 4.34 0 00-4.42 4.26 4.34 4.34 0 004.42 4.26 4.34 4.34 0 004.42-4.26V.02z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/reel/DWScd1eiHyX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Fechar Vídeo">&times;</button>
+            <div class="iframe-container">
+                <video id="videoPlayer" controls playsinline></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
