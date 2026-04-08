@@ -13,7 +13,7 @@ const translations = {
         hero_cta_hire: "Contratar-me",
         about_title1: "Sobre Mim.",
         about_title2: "A Mente Criativa.",
-        about_text: "Ohayo, meu nome é Daniel e meus amigos me chamam de Danny, comecei a editar por gosto e curiosidade e hoje é o que eu faço todos os dias. Gosto de edições que respiram,<br>que têm ritmo e não parecem forçados.<br>no fim, é simples:<br>se prende, funciona.",
+        about_text: "Olá, meu nome é Daniel e meus amigos me chamam de Danny, comecei a editar por gosto e curiosidade e hoje é o que eu faço todos os dias. Gosto de edições que respiram,<br>que têm ritmo e não parecem forçados.<br>no fim, é simples:<br>se prende, funciona.",
         projects_title: "Projetos Selecionados",
         projects_sub: "Explora as minhas áreas de especialidade em edição de vídeo e motion design.",
         reels_sub: "Conteúdo dinâmico de alta retenção para plataformas verticais.",
@@ -40,7 +40,7 @@ const translations = {
         hero_cta_hire: "Hire Me",
         about_title1: "About Me.",
         about_title2: "The Creative Mind.",
-        about_text: "Ohayo, my name is Daniel and my friends call me Danny. I started editing out of passion and curiosity, and today it's what I do every day. I like edits that breathe, that have rhythm and don't feel forced. In the end, it's simple: if it captures you, it works.",
+        about_text: "Hello, my name is Daniel and my friends call me Danny. I started editing out of passion and curiosity, and today it's what I do every day. I like edits that breathe, that have rhythm and don't feel forced. In the end, it's simple: if it captures you, it works.",
         projects_title: "Selected Projects",
         projects_sub: "Explore my areas of expertise in video editing and motion design.",
         reels_sub: "High-retention dynamic content for vertical platforms.",
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 7. Video Modal Logic (Local Video) ---
+    // --- 7. Video Modal Logic (Native HTML5 Video) ---
     const videoModal = document.getElementById('videoModal');
     const videoPlayer = document.getElementById('videoPlayer');
     const closeModal = document.getElementById('closeModal');
@@ -279,11 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 8. Interaction System ---
     videoTriggers.forEach(trigger => {
-        const videoSrc = trigger.getAttribute('data-video-src');
+        const videoId = trigger.getAttribute('data-video-src');
         const aspect = trigger.getAttribute('data-aspect') || 'vertical';
 
         trigger.addEventListener('click', () => {
-            if (videoSrc) openVideo(videoSrc, aspect);
+            if (videoId) openVideo(videoId, aspect);
         });
     });
 
